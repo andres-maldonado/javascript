@@ -9,11 +9,11 @@ var simulateClick = function (elem) {
     var canceled = !elem.dispatchEvent(evt);
 };
 
-var someLink = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
-var someLink2 = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
+var nextFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
+var likeInstagram = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
 
 setInterval(function(){
-	simulateClick(someLink);
-	simulateClick(someLink2);
+	simulateClick(nextFrame);
+	simulateClick(likeInstagram);
 	
 }, 3000);
