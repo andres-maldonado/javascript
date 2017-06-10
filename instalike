@@ -1,10 +1,19 @@
-var jq = document.createElement('script');
-jq.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
-document.getElementsByTagName('head')[0].appendChild(jq);
-// ... give time for script to load, then type (or see below for non wait option)
-jQuery.noConflict();
+var simulateClick = function (elem) {
+    // Create our event (with options)
+    var evt = new MouseEvent('click', {
+        bubbles: true,
+        cancelable: true,
+        view: window
+    });
+    // If cancelled, don't dispatch our event
+    var canceled = !elem.dispatchEvent(evt);
+};
+
+var someLink = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
+var someLink2 = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
 
 setInterval(function(){
-	$("._soakw.coreSpriteLikeHeartOpen").click();
-	setTimeout(function(){$("._de018.coreSpriteRightPaginationArrow").click();}, 1500);
+	simulateClick(someLink);
+	simulateClick(someLink2);
+	
 }, 3000);
