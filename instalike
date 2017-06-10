@@ -15,4 +15,4 @@ setInterval(function(){
 	simulateClick(nextFrame);
 	simulateClick(likeInstagram);
 	
-}, 3000);
+}, 13000);
