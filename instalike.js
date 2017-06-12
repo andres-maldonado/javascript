@@ -15,8 +15,9 @@ function goLike() {
 	var yesOrNot = (Math.floor(Math.random() * 2));
 	switch(yesOrNot){
 		case 0:
+			simulateClick(nextFrame);
 			break;
-       	 	case 1:
+		case 1:
 			simulateClick(likeInstagram);
 			simulateClick(nextFrame);		
 			break;
