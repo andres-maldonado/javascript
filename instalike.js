@@ -8,18 +8,19 @@ var simulateClick = function (elem) {
     var canceled = !elem.dispatchEvent(evt);
 };
 
-var nextFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
+var rightFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
 var likeInstagram = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
+var leftFrame = document.querySelector('a._qdy3e.coreSpriteLeftPaginationArrow');
 
 function goLike() {
 	var yesOrNot = (Math.floor(Math.random() * 2)); //boolean 0 or 1
 	switch(yesOrNot){
 		case 0:
-			simulateClick(nextFrame);
+			simulateClick(leftFrame);
 			break;
 		case 1:
 			simulateClick(likeInstagram);
-			simulateClick(nextFrame);		
+			simulateClick(leftFrame);		
 			break;
         }	
 }
