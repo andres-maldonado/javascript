@@ -12,7 +12,7 @@ var nextFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow'
 var likeInstagram = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
 
 function goLike() {
-	var yesOrNot = (Math.floor(Math.random() * 2));
+	var yesOrNot = (Math.floor(Math.random() * 2)); //boolean 0 or 1
 	switch(yesOrNot){
 		case 0:
 			simulateClick(nextFrame);
@@ -25,7 +25,7 @@ function goLike() {
 }
 
 (function loop() {
-    var rand = Math.round(Math.random() * (3000)) + 1000;
+    var rand = Math.round(Math.random() * (3000 - 500)) + 2000;
     setTimeout(function() {
             goLike();
             loop();  
