@@ -13,15 +13,15 @@ var simulateClick = function (elem) {
 };
 
 function goLike() {
-	if(leftFrame){
+	if(rightFrame){
 	var yesOrNot = (Math.floor(Math.random() * 2)); //boolean 0 or 1
 	switch(yesOrNot){
 		case 0:
-			simulateClick(leftFrame);
+			simulateClick(rightFrame);
 			break;
 		case 1:
 			simulateClick(likeInstagram);
-			simulateClick(leftFrame);		
+			simulateClick(rightFrame);		
 			break;
         }	
 	}else{alert("Broke whit "+i)}
@@ -32,7 +32,7 @@ function goLike() {
     setTimeout(function() {
 	    i = i + 1;
             goLike(i);
-	    if(i=max_number){
+	    if(i==max_number){
 		alert("End Loop whit "+max_number+" elements")    
 	    }else{
             loop();
