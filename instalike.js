@@ -1,7 +1,7 @@
 var rightFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
 var likeInstagram = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
 var leftFrame = document.querySelector('a._qdy3e.coreSpriteLeftPaginationArrow');
-var max_number = 5;
+var max_number = Math.round(Math.random()*(30)+70);
 var i = 0;
 var simulateClick = function (elem) {
     var evt = new MouseEvent('click', {
@@ -28,6 +28,7 @@ function goLike() {
 	}else{
 		console.log("Broke whit "+i);
 		alert("Broke whit "+i);
+		window.location.replace("https://www.instagram.com/explore/");
 	}
 }
 
@@ -38,6 +39,7 @@ function goLike() {
 	    if(i==max_number){
 		    console.log("End Loop whit "+max_number+" elements");
 		    alert("End Loop whit "+max_number+" elements");
+		    window.location.replace("https://www.instagram.com/explore/");
 	    }else{
             loop();
 		    }
