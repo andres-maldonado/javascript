@@ -1,5 +1,9 @@
+var rightFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
+var likeInstagram = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
+var leftFrame = document.querySelector('a._qdy3e.coreSpriteLeftPaginationArrow');
+var max_number = Math.round(Math.random()*(50)+50)
+var i = 0;
 var simulateClick = function (elem) {
-    // Create our event (with options)
     var evt = new MouseEvent('click', {
         bubbles: true,
         cancelable: true,
@@ -8,11 +12,8 @@ var simulateClick = function (elem) {
     var canceled = !elem.dispatchEvent(evt);
 };
 
-var rightFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
-var likeInstagram = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
-var leftFrame = document.querySelector('a._qdy3e.coreSpriteLeftPaginationArrow');
-
 function goLike() {
+	if(leftFrame){
 	var yesOrNot = (Math.floor(Math.random() * 2)); //boolean 0 or 1
 	switch(yesOrNot){
 		case 0:
@@ -23,13 +24,19 @@ function goLike() {
 			simulateClick(leftFrame);		
 			break;
         }	
+	}else{alert("Broke whit "+i)}
 }
 
 (function loop() {
     var rand = Math.round(Math.random() * (3000 - 500)) + 2000;
     setTimeout(function() {
-            goLike();
-            loop();  
+	    i = i + 1;
+            goLike(i);
+	    if(i=max_number){
+		alert("End Loop whit "+max_number+" elements")    
+	    }else{
+            loop();
+		    }
     }, rand);
 }());
 
