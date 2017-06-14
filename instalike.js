@@ -28,7 +28,6 @@ function goLike() {
 	}else{
 		console.log("Broke whit "+i);
 		alert("Broke whit "+i);
-		window.location.replace("https://www.instagram.com/explore/");
 	}
 }
 
@@ -39,7 +38,6 @@ function goLike() {
 	    if(i==max_number){
 		    console.log("End Loop whit "+max_number+" elements");
 		    alert("End Loop whit "+max_number+" elements");
-		    window.location.replace("https://www.instagram.com/explore/");
 	    }else{
             loop();
 		    }
