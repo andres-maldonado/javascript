@@ -24,7 +24,10 @@ function goLike() {
 			simulateClick(rightFrame);		
 			break;
         }	
-	}else{alert("Broke whit "+i)}
+	}else{
+		console.log("Broke whit "+i);
+		alert("Broke whit "+i);
+	}
 }
 
 (function loop() {
@@ -33,7 +36,8 @@ function goLike() {
 	    i = i + 1;
             goLike(i);
 	    if(i==max_number){
-		alert("End Loop whit "+max_number+" elements")    
+		    console.log("End Loop whit "+max_number+" elements");
+		    alert("End Loop whit "+max_number+" elements");
 	    }else{
             loop();
 		    }
