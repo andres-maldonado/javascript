@@ -1,7 +1,7 @@
 var rightFrame = document.querySelector('a._de018.coreSpriteRightPaginationArrow');
 var likeInstagram = document.querySelector('span._soakw.coreSpriteLikeHeartOpen');
 var leftFrame = document.querySelector('a._qdy3e.coreSpriteLeftPaginationArrow');
-var max_number = Math.round(Math.random()*(50)+50)
+var max_number = Math.round(Math.random()*(60)+40)
 var i = 0;
 var simulateClick = function (elem) {
     var evt = new MouseEvent('click', {
