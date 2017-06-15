@@ -23,6 +23,7 @@ function goLike() {
 			simulateClick(likeInstagram);
 			simulateClick(rightFrame);
 			i = i + 1;
+			console.log("Current Like "+i);
 			return i;
         }	
 	}else{
