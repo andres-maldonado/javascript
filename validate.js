@@ -1,4 +1,4 @@
-**VALIDATE NUMBER :**
+// VALIDATE NUMBER
 
 !/^([0-9])*$/.test(numero)
 
