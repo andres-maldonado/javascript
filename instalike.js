@@ -1,5 +1,5 @@
 var rightFrame = document.querySelector('a._3a693.coreSpriteRightPaginationArrow');
-var likeInstagram = document.querySelector('span._soakw.coreSpriteHeartOpen');
+var likeInstagram = document.querySelector('span._8scx2.coreSpriteHeartOpen');
 var leftFrame = document.querySelector('a._qdy3e.coreSpriteLeftPaginationArrow');
 var max_number = Math.round(Math.random()*(20)+30);
 var i = 0;
